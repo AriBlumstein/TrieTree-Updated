@@ -30,7 +30,7 @@ class Trie
 
 public:
 	Trie() { root = new TrieNode; }
-	~Trie() { deleteAll(root); }
+	~Trie() { deleteAll(root); root=NULL; }
 	bool insert(string wrd) { return insertT(root, wrd); }
 	bool delW(string wrd) { return delT(root, wrd); }
 	int printAutoSuggestions(string wrd) { return printAutoSuggestionsT(root, wrd); }
