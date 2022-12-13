@@ -73,7 +73,7 @@ void Trie::delR(TrieNode* curNode, string key)
 	string rest = key;
 	rest.erase(rest.begin());
 
-	//if there is no child for the current letter, return flase, the word wasn't in the tree
+	//if there is no child for the current letter, return, the word wasn't in the tree
 	if (!curNode->children[CHAR_TO_INDEX(cur)])
 	{
 		return;
