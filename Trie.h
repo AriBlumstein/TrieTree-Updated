@@ -16,17 +16,17 @@ using namespace std;
 class Trie
 {
 	
-// trie node 
-struct TrieNode
-{
-	TrieNode* children[ALPHABET_SIZE];
+    // trie node 
+        struct TrieNode
+        {
+	        TrieNode* children[ALPHABET_SIZE];
 
-	// isWordEnd is true if the node represents 
-	// end of a word 
-	bool isWordEnd;
-	TrieNode();
-};
-	TrieNode* root;
+	        // isWordEnd is true if the node represents 
+	        // end of a word 
+	        bool isWordEnd;
+	        TrieNode();
+        };
+        TrieNode* root;
 
 public:
 	Trie() { root = new TrieNode; }
@@ -42,7 +42,6 @@ private:
 	bool isLastNode(TrieNode* root);
 	bool insertT(TrieNode* root, string key);
 	bool delT(TrieNode* cur, string key);
-	//bool delR(TrieNode* prev, TrieNode* root, string key, int ind);
 	bool searchT(TrieNode* root, string key);
 	int suggestionsRec(TrieNode* root, string currPrefix);
 	int printAutoSuggestionsT(TrieNode* root, string query);
