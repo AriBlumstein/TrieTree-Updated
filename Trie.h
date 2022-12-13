@@ -38,7 +38,6 @@ public:
 	void printTrie() { printT(root, 0); }
 	
 private:
-	TrieNode* getNode(void);
 	bool isLastNode(TrieNode* root);
 	bool insertT(TrieNode* root, string key);
 	bool delT(TrieNode* cur, string key);
