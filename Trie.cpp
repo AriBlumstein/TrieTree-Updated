@@ -60,14 +60,14 @@ bool Trie::delT(TrieNode* curNode, string key)
 //method to remove a word from a tree, recieves a node of the tree and the word to remove
 void Trie::delR(TrieNode* curNode, string key)
 {
-	//if we made it trough the entire string, we reached the end of the word, set endofword as false and return true
+	//if we made it trough the entire string, we reached the end of the word, set is as false
 	if (key == "")
 	{
 		if (curNode->isWordEnd)
 		{
 			curNode->isWordEnd = false;
-			return;
 		}
+		return;
 	}
 
 	//let us get the first char of key, and the rest of the string after the first char
